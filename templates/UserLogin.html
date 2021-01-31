@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>USER LOGIN</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/UserLogin.css' %}">
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="form">
+        
+        <form class="login-form" method='POST' action="{% url 'Result' %}" >
+          {% csrf_token %}
+          <input type="text" placeholder="usn" required name="usn"/>
+          <input type="password" placeholder="password" required name="password"/>
+          <button type="submit">login</button>
+          
+        </form>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      $(".message a").click(function () {
+        $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
+      });
+    </script>
+  </body>
+</html>

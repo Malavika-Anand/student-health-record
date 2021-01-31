@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+    <title>VIEW PARENT FORM</title>
+    {% load static  %}
+    <link rel="stylesheet" href="{% static 'css/VIEWPARENTFORM.css' %}">
+  </head>
+  
+    
+    <body>
+        <div class="wrap">
+          <nav>
+            <ul>
+              <li><a class="active" href="{% url 'AdminNavbar'%}"> Home</a></li>
+          <li><a href="{%url 'VIEWSTUDENTFORM'%}"> Student Form</a></li>
+          <li><a href="{%url 'VIEWPARENTFORM'%}"> Parent Form</a></li>
+          <li><a href="{%url 'VIEWDOCTORFORM'%}"> Doctor Form</a></li>
+          <li><a href="{%url 'ViewStudent'%}"> View Student</a></li>
+          <li><a href="{%url 'ViewParent'%}"> View Parent</a></li>
+          <li><a href="{%url 'ViewDoctor'%}"> View Doctor</a></li>
+          <!-- <li><a href="{%url 'ViewTests'%}"> View Tests</a></li> -->
+          <li><a href="{% url 'AdminNavbar' %}"> Back</a></li>
+          <li><a href="{%url 'Index'%}"> Log Out</a></li>
+            </ul>
+          </nav>
+          
+        </div>
+            
+    
+
+  <div class="home"><h1>VIEW PARENT FORM</h1></div>
+  <div class="main">
+    <form method="POST" action="{% url 'ViewParent' %}"> 
+      {% csrf_token %}
+        
+        <h2 class="name">Student USN</h2>
+        <input class="usn" type="text" name="usn" required>
+       
+        <h2 class="name">Parent Name</h2>
+        <input class="parent" type="text" name="parent" required>
+        
+        <h2 class="name"> Mobile No.</h2>
+        <input class="mobile" type="number" name="mobile" required>
+        
+         <h2 class="name"> Email id</h2>
+        <input class="email" type="text" name="email" required>
+        
+         <h2 class="name"> Address</h2>
+        <input class="address" type="text" name="address" required>
+        
+        
+        <h2 class="name">Gender</h2>
+        <select class="optionselector" id=“gender” name="gender" required>
+        <option value="female">Female</option>
+        <option value="male">Male<option>
+        </select>
+       
+        <button type="submit">Submit</button>
+        </form>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+    <title>HEALTH RECORD</title>
+    {% load static  %}
+    <link rel="stylesheet" href="{% static 'css/HEALTHRECORDFORM.css' %}">
+  </head>
+  
+    
+    <body>
+        <div class="wrap">
+          <nav>
+            <ul>
+               <li><a class="active" href="{% url 'DoctorNavbar'%}"> Home</a></li>
+               <li><a href="{% url 'StudentForm' %}"> Student Details</a></li>
+               <li><a href="{% url 'HEALTHRECORDFORM' %}"> Health Record Form</a></li>
+               <li><a href="{% url 'StudentHealthRecord' %}"> Student Health Record</a></li>
+               <li><a href="{% url 'DoctorNavbar'%}"> Back</a></li>
+               <li><a href="{% url 'Index' %}"> Log Out</a></li>
+            </ul>
+          </nav>
+          
+        </div>
+            
+    
+
+  <div class="home"><h1>HEALTH RECORD FORM</h1></div>
+  <div class="main">
+    <form method="POST" action="{% url 'StudentHealthRecord' %}">
+      {% csrf_token %}
+        
+         <h2 class="name"> USN</h2>
+        <input class="usn" type="text" name="usn" required>
+       
+         <h2 class="name"> Test Done</h2>
+        <input class="test" type="text" name="test" required>
+       
+         <h2 class="name"> Test Result</h2>
+        <input class="result" type="text" name="result" required>
+       
+         <h2 class="name"> Doctor Advice</h2>
+        <input class="advice" type="text" name="advice" required>
+       
+         <h2 class="name"> Medicines</h2>
+        <input class="medicines" type="text" name="medicines" required>
+       
+        <button type="submit">Submit</button>
+        </form>
+    </div>
+    </body>
+</html>

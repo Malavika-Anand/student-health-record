@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VIEW STUDENT</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/StudentHealthRecord.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mytable.css' %}">
+
+  </head>
+
+
+<body>
+    <div class="wrap">
+      <nav>
+        <ul>
+          <li><a href="{% url 'StudentHealthRecord' %}"> View Health Record</a></li>  
+          <li><a href="{% url 'Index' %}"> Log Out</a></li>
+            
+          
+        </ul>
+      </nav>
+      <table class="mytable">
+        <thead>
+          <tr>
+            <!-- <th>STUDENT NAME</th>-->
+            <!-- <th>USN</th>  -->
+            <!-- <th>BRANCH</th>
+            <th>SEMESTER</th>
+            <th>SECTION</th>
+            <th>GENDER</th>
+            <th>AGE</th>
+            <th>MOBILE NO.</th>
+            <th>ADDRESS</th>
+            <th>DOCTOR NAME</th>  -->
+            <th>TEST DONE</th>
+            <th>TEST RESULT</th>
+            <th>DOCTOR ADVICE</th>
+            <th>MEDICINES</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in adminViewTest %}
+            <tr>
+              <td>{{data.test_name}}</td>
+              <td>{{data.result}}</td>
+              <td>{{data.advice}}</td>
+              <td>{{data.medicines}}</td>
+             </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    </body>
+</html>

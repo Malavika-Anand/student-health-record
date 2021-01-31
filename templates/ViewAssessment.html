@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VIEW ASSESSMENT</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/ViewAssessment.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mytable.css' %}">
+
+  </head>
+
+
+<body>
+    <div class="wrap">
+      <nav>
+        <ul>
+          <li><a class="active" href="{% url 'AdminNavbar'%}"> Home</a></li>
+          <li><a href="{%url 'VIEWSTUDENTFORM'%}"> Student Form</a></li>
+          <li><a href="{%url 'VIEWPARENTFORM'%}"> Parent Form</a></li>
+          <li><a href="{%url 'VIEWDOCTORFORM'%}"> Doctor Form</a></li>
+          <li><a href="{%url 'VIEWASSESSMENTFORM'%}"> Assessment Form</a></li>
+          <li><a href="{%url 'ViewStudent'%}"> View Student</a></li>
+          <li><a href="{%url 'ViewParent'%}"> View Parent</a></li>
+          <li><a href="{%url 'ViewDoctor'%}"> View Doctor</a></li>
+          <li><a href="{%url 'ViewAssessment'%}"> View Assessment</a></li>
+          <li><a href="{%url 'ViewTests'%}"> View Tests</a></li>
+          <li><a href="{%url 'Index'%}"> Log Out</a></li>
+        </ul>
+      </nav>
+      <table class="mytable">
+        <thead>
+          <tr>
+            <th>UDN</th>
+            <th>USN</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in adminViewAssessment %}
+            <tr>
+              <td>{{data.usn}}</td>
+              <td>{{data.udn}}</td> 
+            </tr>
+          {% endfor %}
+        </tbody>
+        
+      </table>
+    </div>
+    </body>
+</html>

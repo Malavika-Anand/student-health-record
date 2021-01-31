@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>STUDENT DETAILS</title>
+       {% load static %}
+    <link rel="stylesheet" href="{% static 'css/DoctorNavbar.css' %}">
+  </head>
+  <body>
+    <div class="wrap">
+      <nav>
+        <ul>
+          <li><a class="active" href="{% url 'DoctorNavbar'%}"> Home</a></li>
+          <li><a href="{% url 'ViewStudent' %}"> Student Details</a></li>
+            <li><a href="{% url 'HEALTHRECORDFORM' %}"> Health Record Form</a></li>
+            <li><a href="{% url 'StudentHealthRecord' %}"> Student Health Record</a></li>
+          <li><a href="{% url 'Index' %}"> Log Out</a></li>
+        </ul>
+      </nav>
+      <section></section>
+    </div>
+  </body>
+</html>

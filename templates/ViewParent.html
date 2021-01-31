@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VIEW PARENT</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/ViewParent.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mytable.css' %}">
+
+  </head>
+
+
+<body>
+    <div class="wrap">
+      <nav>
+        <ul>
+          <li><a class="active" href="{% url 'AdminNavbar'%}"> Home</a></li>
+          <li><a href="{%url 'VIEWSTUDENTFORM'%}"> Student Form</a></li>
+          <li><a href="{%url 'VIEWPARENTFORM'%}"> Parent Form</a></li>
+          <li><a href="{%url 'VIEWDOCTORFORM'%}"> Doctor Form</a></li>
+          <li><a href="{%url 'ViewStudent'%}"> View Student</a></li>
+          <li><a href="{%url 'ViewParent'%}"> View Parent</a></li>
+          <li><a href="{%url 'ViewDoctor'%}"> View Doctor</a></li>
+          <!-- <li><a href="{%url 'ViewTests'%}"> View Tests</a></li> -->
+          <li><a href="{% url 'AdminNavbar' %}"> Back</a></li>
+          <li><a href="{%url 'Index'%}"> Log Out</a></li>
+        </ul>
+      </nav>
+      <table class="mytable">
+        <thead>
+          <tr>
+            <th>STUDENT USN</th>
+            <th>PARENT NAME</th>
+            <th>MOBILE NO.</th>
+            <th>EMAIL ID</th>
+            <th>GENDER</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in adminViewParent %}
+            <tr>
+              <td>{{data.usn}}</td>
+              <td>{{data.parent}}</td>
+              <td>{{data.mobile}}</td>
+              <td>{{data.email}}</td>
+              <td>{{data.sex}}</td>
+              <td>{{data.address}}</td>
+             </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>DOCTOR LOGIN</title>
+       {% load static %}
+    <link rel="stylesheet" href="{% static 'css/DoctorLogin.css' %}">
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="form">
+        
+
+        <form class="login-form">
+          <input type="text" placeholder="Doctor id" />
+          <input type="password" placeholder="password" />
+          <button><a href="{% url 'DoctorNavbar' %}">login</a></button>
+          
+        </form>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      $(".message a").click(function () {
+        $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
+      });
+    </script>
+  </body>
+</html>

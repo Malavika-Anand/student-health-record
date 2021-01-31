@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>result</title>
+    {% load static  %}
+    <link rel="stylesheet" href="{% static 'css/result.css' %}">
+  </head>
+  <body>
+    
+    
+    <div class="wrap">
+      <nav>
+        <ul>
+          <li><a class="active" href="{% url 'Result' %}"> Home</a></li>
+          <!-- <li><a href="{% url 'StudentForm' %}"> Student Form</a></li> -->
+          <li><a href="{% url 'StudentHealthRecord' %}"> View Health Record</a></li>
+          <li><a href="{% url 'Index' %}"> Log Out</a></li>
+        </ul>
+      </nav>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h1><bold> WELCOME</bold></h1>
+    
+      <!-- <h2>The result is</h2>
+    
+      
+      {% if ans == 1 %}
+      <h2>The patient has a heart problem</h2>
+      {% else %}
+      <h2>The patient does not have heart problem</h2>             #Insertion
+      {% endif %}
+      <section></section> -->
+     
+    </div>
+  
+   
+    
+    
+    
+  </body>
+</html>

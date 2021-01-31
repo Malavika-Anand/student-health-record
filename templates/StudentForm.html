@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+    <title>STUDENT FORM</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/StudentForm.css' %}">
+  </head>
+  
+    
+    <body>
+        <div class="wrap">
+          <nav>
+            <ul>
+                <li><a class="active" href="{% url 'DoctorNavbar'%}"> Home</a></li>
+                <li><a href="{% url 'StudentForm' %}"> Student Details</a></li>
+                <li><a href="{% url 'HEALTHRECORDFORM' %}"> Health Record Form</a></li>
+                <li><a href="{% url 'StudentHealthRecord' %}"> Student Health Record</a></li>
+                <li><a href="{% url 'DoctorNavbar' %}"> Back</a></li>
+                <li><a href="{% url 'Index' %}"> Log Out</a></li>
+            </ul>
+          </nav>
+          
+        </div>
+            
+    
+
+  <div class="home"><h1>Form</h1></div>
+  <div class="main">
+    <form method="POST">
+      {% csrf_token %}
+        <div id="name">
+        
+         <h2 class="name"> Student's USN</h2>
+        <input class="usn" type="text" name="usn" required>
+        
+         
+       
+        <button type="submit"><a href="{% url 'HEALTHRECORDFORM' %}"> Submit</a></button>
+        </form>
+    </div>
+    </body>
+</html>

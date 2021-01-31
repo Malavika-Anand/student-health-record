@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+    <title>VIEW ASSESSMENT FORM</title>
+    {% load static  %}
+    <link rel="stylesheet" href="{% static 'css/VIEWASSESSMENTFORM.css' %}">
+  </head>
+  
+    
+    <body>
+        <div class="wrap">
+          <nav>
+            <ul>
+              <li><a class="active" href="{% url 'AdminNavbar'%}"> Home</a></li>
+          <li><a href="{%url 'VIEWSTUDENTFORM'%}"> Student Form</a></li>
+          <li><a href="{%url 'VIEWPARENTFORM'%}"> Parent Form</a></li>
+          <li><a href="{%url 'VIEWDOCTORFORM'%}"> Doctor Form</a></li>
+          <li><a href="{%url 'VIEWASSESSMENTFORM'%}"> Assessment Form</a></li>
+          <li><a href="{%url 'ViewStudent'%}"> View Student</a></li>
+          <li><a href="{%url 'ViewParent'%}"> View Parent</a></li>
+          <li><a href="{%url 'ViewDoctor'%}"> View Doctor</a></li>
+          <li><a href="{%url 'ViewAssessment'%}"> View Assessment</a></li>
+          <li><a href="{%url 'ViewTests'%}"> View Tests</a></li>
+          <li><a href="{%url 'Index'%}"> Log Out</a></li>
+            </ul>
+          </nav>
+          
+        </div>
+            
+    
+
+  <div class="home"><h1> VIEW ASSESSMENT FORM</h1></div>
+  <div class="main">
+    <form method="POST" action="{% url 'ViewAssessment' %}">
+      {% csrf_token %}
+        <div id="name">
+        <h2 class="name">UDN</h2>
+        <input class="udn" type="text" name="udn" required>
+        </div>
+        <h2 class="name">USN</h2>
+        <input class="usn" type="text" name="usn" required>
+        
+        
+        <button type="submit">Submit</button>
+        </form>
+    </div>
+    </body>
+</html>

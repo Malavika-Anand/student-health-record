@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HOME PAGE</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/Index.css' %}">
+  </head>
+    <body>
+        <center><h1>STUDENT MEDICAL HISTORY</h1></center>
+        <div class="parent-div">
+          <a href="{% url 'AdminLogin'%}">
+        <img   src="{% static 'images/AdminIcon.png' %}"height="200"
+          width="250"/></a>
+          <a href="{% url 'UserLogin'%}">
+          <img src="{% static 'images/UserIcon.jpg' %}"height="200"
+            width="250"/></a> 
+            <a href="{% url 'DoctorLogin'%}">
+          <img src="{%static 'images/DoctorIcon.jpg' %}"height="200"
+            width="250"/></a>
+            
+        </div>
+         
+      </div>
+    </body>
+  
+</html>
