@@ -1,2 +1,11 @@
 # student-health-record
 A Web Application that helps Educational Institutions keep track of the students health record. 
+
+Health is Wealth. The previous statement is what we have been hearing from age old days and throughout our lives in various places and from various people. During the course of a human being’s life health is often neglected. This negligence happens the most during the college days when a student is away from home and develops erratic habits and behavior. Parents have no way to monitor their child's health and to correct their habits. Consumption of unhealthy meals and junk food is at an all-time high. Availability of balanced and nutritious meals are scarce. Hence, a need for a way to monitor a child’s health and to take advice from a doctor all from one place is the need of the hour for Educational Institutions like Colleges and Schools.
+This project aims to solve the problem by building a Web based Application which connects the student, parent, doctor and the Hostels\PG heads all in one place. The Heads act as Admins who have the access to the entire details of a student. The doctor has the access to prescribe tests and medications to the students. The student and parents can view the doctor's advice and act accordingly. Chronic diseases can be caught early and those diseases can be prevented at the root stage.
+This eases the parents mind and reduces the burden of having to worry about their wards health. This app also motivates the students to take better care of their health and keep fit and lead an active lifestyle. This helps them throughout their life. This project is a one stop destination for a Primary Healthcare physician to keep track of the patients (student) health. They can get an overview of the patient's history and recommend the appropriate course of action to lead a better life.
+
+This in turn helps the student perform better academically and also helps the student develop as a whole. Parents can be worry free by knowing that their ward is leading a healthy lifestyle. The admins can keep track of the student’s health and can take measures to improve the lifestyle of the ward. The doctors can work on early detection of diseases and prevent diseases and sickness in the patient. They can also give lifestyle advice to
+students and prescribe the necessary medicines for the same.
+
+
